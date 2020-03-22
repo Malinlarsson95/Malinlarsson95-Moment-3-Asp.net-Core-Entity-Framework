@@ -1,0 +1,28 @@
+﻿@model AspMoment3.Models.Album
+
+@{
+    ViewData["Title"] = "Radera";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+<h4 class="text-center text-danger">Vill du verkligen radera albumet?</h4>
+
+<div id="albums" class="row">
+    <div class="album mt-4 col-md-5 col-11">
+        <!--Skriver ut modellens propertys-->
+        <h3>@Html.DisplayFor(model => model.Name)</h3>
+        <p><span class="bold">@Html.DisplayNameFor(model => model.Artist) </span>@Html.DisplayFor(model => model.Artist.Name)</p>
+        <p><span class="bold">@Html.DisplayNameFor(model => model.Realease) </span>@Html.DisplayFor(model => model.Realease)</p>
+        <p id="last"><span class="bold">@Html.DisplayNameFor(model => model.NumSongs) </span>@Html.DisplayFor(model => model.NumSongs)</p>
+        <!--Formulär för att radera album-->
+        <form asp-action="Delete" class="deleteform">
+            <input type="hidden" asp-for="AlbumID" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <br />
+        </form>
+    </div>
+</div>
+<div id="links" class="text-center">
+    <a asp-action="Index" class="mt-4 d-inline-block">Tillbaka</a>
+</div>

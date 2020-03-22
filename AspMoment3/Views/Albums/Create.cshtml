@@ -1,0 +1,43 @@
+﻿@model AspMoment3.Models.Album
+
+@{
+    ViewData["Title"] = "Lägg till album";
+}
+
+    <h2 class="text-center">@ViewData["Title"]</h2>
+
+
+<div class="row">
+    <div class="album mt-4 col-md-5 col-11">
+        <!--formulär för att skapa album-->
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumSongs" class="control-label"></label>
+                <input asp-for="NumSongs" class="form-control" />
+                <span asp-validation-for="NumSongs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Realease" class="control-label"></label>
+                <input asp-for="Realease" class="form-control" />
+                <span asp-validation-for="Realease" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtistID" class="control-label"></label>
+                <select asp-for="ArtistID" class="form-control" asp-items="ViewBag.ArtistID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lägg till album" class="mt-2 btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="links" class="text-center">
+    <a asp-action="Index" class="mt-4 d-inline-block">Tillbaka</a>
+</div>

@@ -1,0 +1,22 @@
+﻿@model AspMoment3.Models.Album
+
+@{
+    ViewData["Title"] = "Mer info";
+}
+<h2 class="text-center">@ViewData["Title"]</h2>
+<div id="albums" class="row">
+        <div class="album mt-4 col-md-5 col-11">
+            <!--Läser ut modellens propertys-->
+            <h3>@Html.DisplayFor(model => model.Name)</h3>
+            <p><span class="bold">@Html.DisplayNameFor(model => model.Artist) </span>@Html.DisplayFor(model => model.Artist.Name)</p>
+            <p><span class="bold">@Html.DisplayNameFor(model => model.Realease) </span>@Html.DisplayFor(model => model.Realease)</p>
+            <p id="last"><span class="bold">@Html.DisplayNameFor(model => model.NumSongs) </span>@Html.DisplayFor(model => model.NumSongs)</p>
+
+        </div>
+</div>
+<div id="links" class="text-center">
+    <a asp-action="Edit" asp-route-id="@Model.AlbumID" class="m-3 d-inline-block btn-success">Ändra</a>
+    <a asp-action="Delete" asp-route-id="@Model.AlbumID" class="m-3 d-inline-block btn-danger">Radera</a>
+    <br />
+    <a asp-action="Index" class="mt-2 d-inline-block">Tillbaka</a>
+</div>

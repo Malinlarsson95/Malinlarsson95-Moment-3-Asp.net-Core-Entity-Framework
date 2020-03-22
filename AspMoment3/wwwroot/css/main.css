@@ -1,0 +1,130 @@
+﻿body {
+    background-color: #303841;
+}
+/*HEADER*/
+header img {
+    border-top: 10px solid #F6C90E;
+    border-bottom: 10px solid #F6C90E;
+}
+
+a h1 {
+    font-family: rig-solid-bold-halftone, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #F6C90E;
+    padding: 1% 0;
+    font-size: 3.5em;
+}
+header a:hover {
+    text-decoration: none;
+}
+/*FONTS*/
+h2 {
+    background-color: #F6C90E;
+    width: 40%;
+    margin: 3% auto;
+    font-family: roboto-slab, serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2.5em;
+}
+
+h3 {
+    font-family: roboto-slab, serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F6C90E;
+    font-size: 2em;
+}
+h4 {
+    font-family: roboto-slab, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.9em;
+}
+.album p {
+    font-size: 1.5em;
+    margin: 2% 0;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #eeeeee;
+}
+#last {
+    margin: 2% 0 5%;
+}
+.bold {
+    font-weight: 700;
+}
+
+/*MAINCONTENT*/
+.album {
+    border: 2px solid #F6C90E;
+    width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2% 1%;
+}
+
+#maincontent a {
+    font-size: 1.3em;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #22262a;
+    background-color: #F6C90E;
+    padding: 1% 5%;
+    border-radius: 10px;
+    margin: 0 0;
+    transition-duration: 200ms;
+}
+#maincontent a:hover {
+    background-color: #fbde64;
+    text-decoration: none;
+    color: #22262a;
+}
+
+.album label {
+    font-size: 1.5em;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #eeeeee;
+}
+.album .btn {
+    font-size: 1.3em;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    padding: 1% 5%;
+}
+.deleteform input {
+    font-size: 1.3em;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    padding: 1% 5%;
+    border-radius: 10px;
+}
+/*FOOTER*/
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1% 0 1%;
+    margin: 7% 0 0 0;
+}
+
+    footer ul {
+        font-family: roboto, sans-serif;
+        font-style: normal;
+        font-weight: 200;
+        color: #F6C90E;
+        list-style: none;
+    }
+
+footer li {
+    margin: 0.1% auto;
+}

@@ -1,0 +1,23 @@
+﻿@model AspMoment3.Models.Artist
+
+@{
+    ViewData["Title"] = "Radera";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+<h4 class="text-center text-danger">Vill du verkligen radera artisten?</h4>
+
+<div id="albums" class="row">
+    <div class="album mt-4 col-md-5 col-11">
+        <h3>@Html.DisplayFor(model => model.Name)</h3>
+
+        <form asp-action="Delete" class="deleteform">
+            <input type="hidden" asp-for="ArtistID" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+    </div>
+</div>
+<div id="links" class="text-center">
+    <a asp-action="Index" class="mt-4 d-inline-block">Tillbaka</a>
+</div>

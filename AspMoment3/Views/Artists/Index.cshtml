@@ -1,0 +1,23 @@
+﻿@model IEnumerable<AspMoment3.Models.Artist>
+
+@{
+    ViewData["Title"] = "Artister";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+<div id="albums" class="row">
+    @foreach (var item in Model)
+    {
+    <div class="album mb-4 col-md-5 col-11">
+        <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+        <a asp-action="Edit" asp-route-id="@item.ArtistID" class="m-3 d-inline-block btn-success">Ändra</a>
+        <a asp-action="Delete" asp-route-id="@item.ArtistID" class="m-3 d-inline-block btn-danger">Radera</a>
+    </div>
+    }
+</div>
+<div id="links" class="text-center">
+    <a asp-action="Create" class="m-3 d-inline-block btn-success">Lägg till ny artist</a>
+    <br />
+    <a asp-controller="Albums" asp-action="Index" class="d-inline-block">Se albums</a>
+</div>
